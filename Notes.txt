@@ -1,0 +1,270 @@
+Client to ISP to DNS it send IP address of the site
+https://www.appbrewery.co/p/web-development-course-resources
+______________________________________________________________________
+
+2 Into to HTML:
+<h1> to <h6>
+<p></p>
+<hr> -> Horizontal Lline/Rule
+<br> -> Break 
+
+______________________________________________________________________
+
+3 Intermediate HTML
+<ul> -> Unordered List 
+	<li></li> -> List Items
+	<li></li>
+</ul>	
+<ol> -> Ordered List 
+	<li></li> -> List Items
+	<li></li>
+</ol>	
+<ol start="5"> -> Starts ol from 5
+// Nesting of ol and ul 
+<a href="google.com"> Site </a>
+<a drag=true>Draggable text</a> -> You can drag this text 
+
+<img src=""> -> Void element/sefl closing tag
+
+______________________________________________________________________
+
+4 Multipage HTML 
+../esay.docx -> Upar ke folder me check karo 
+./dog.png -> Check in the current folder  we can also SKIP '.' and write dog.png
+
+______________________________________________________________________
+
+5 Intro to CSS
+III ways to put CSS: i) Inline -> <tag style='css'>
+		    ii) Internal -> <style>css</style>
+		   iii) External -> <link href="style.css">
+Add CSS in many ways, using class(.class-name), id(#id-name), p[draggable="true"]{apply style}
+Class can be multiple BUT id must be unique 
+
+______________________________________________________________________
+
+6 CSS Properties
+1px -> 1/96th inch (0.26 mm) 
+1pt -> 1/72 inch (0.35 mm) 
+1em -> 100% size of parent, Jo bhi iska parent hai uska 'x' em's times 
+1rem -> 100% of the root, i.e generally html tag ka size, IMP use this 
+
+Text -> padding -> border -> margin
+1->2->3->4 in clockwose direction from top,right,down,left
+
+______________________________________________________________________
+
+7 Intermediate CSS
+Position, Specifity, Type, Importance 
+h1, h2, .class, #id{} -> Select multiple tags, class, ids
+selector > selector{} -> Direct parent and child ko affect karta hai, div ke under wala div
+selector selector{} -> ancestor and descendant, saare descendants ko update kar dega 
+selectorselector{} -> to specify particular element, like h1#title.big.heading{}
+selector selectorselector{} -> Ancestor and chaining 
+
+static, relative, absolute, fixed 
+IMP position -> keep it relative, to uske upar wale div ke relative hoga 
+z-index -> kiske upar kya rahega, height allignment on z-axis 
+position -> fixed it wont change the position even on scrolling 
+ 
+______________________________________________________________________
+
+8 Advance CSS
+<span> -> tag used to write with finite size bonding box 
+display: inline/inline-block -> Display elements in same line 
+img{ float:left} -> shift img to left, and we can wrap text on right side
+footer{ clear: left} -> Footer ko shift nahi karega, occupies full space 
+@media (max-width:600px) {} -> Agr width<600 to apply these conditions 
+@media (max-width:600px) and (min-width: 900px) {} -> Apply combination of statement 
+@media screen(orientation: landscape){} -> Prop at diff orientation  
+
+______________________________________________________________________
+
+9 Flex Box
+display: flex/inline-flex -> How to orient the box
+flex-direction: row/column -> row/column me flex direction 
+order: number -> this will shift the position, good for inspection 
+flex-wrap: rap -> Makes responsive shifting/ Parent ki property hai 
+justify-content: flex-start/flex-end/center/space-between -> left/right/center/space se shuru hoga 
+align-items: flex-start/center -> Allign contents of flex in aligned position 
+align-self: center -> this works on individual child of flexbox
+Cheat-sheat: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Content width < Width < Flex-basis < min/max width
+
+______________________________________________________________________
+
+10 Grid
+display: grid
+grid-template-rows/coulumns: 1fr 2fr -> Fractional ratio of 1:2
+grid-template-rows/coulumns: auto minmax(200px,500px) -> types to fit size and layout 
+grid-column: span 2 -> occupies two spaces in a grid instead of 1 
+
+______________________________________________________________________
+
+11 Bootstrap
+class= "col-xxl-1/11", "col-xl-2/10" , lg,md -> size ratio to split things out of 12
+<html lang="en" data-bs=theme="dark"> -> For dark theme 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+______________________________________________________________________
+
+12 Javascript
+typeof("Sahu") -> String, specifies datatype 
+var myname = "Sahu" -> Declaring datatype 
+alert("Sahu") -> Print statement on cli user can see
+console.log("Sahu") -> Print it only for developer 
+prompt("Enter age ?") -> Input 
+name.slice(2,4) -> Slice 
+var.toUpperCase() -> Upper case
+function name(){} -> Function 
+var ar - [1,2,3,5]; -> Array is like list in python 
+arr.includes(1); -> Boolean yes or no
+arr.push(), pop() -> Explanatory
+
+______________________________________________________________________
+
+13 DOM
+Prop -> innerHTML, style, firstChild
+Methods -> click(), append(), setAttribute() 
+document.getElementsByTagName/ChildName... -> Different DOM opperations 
+doc.innerHTML -> Change text by substituting other text
+doc.querrySelector() 
+use CamelCase to update style conventions, like fontSize instead of font-size 
+document.querySelector("h1").classList.add/toggle("new class"); -> Update with new class weights
+document.querrySelector('a').set/getAttribute("href") = "www.google.com" -> update attributes 
+debugger; -> Used to debug step by step code
+document.querySelectorAll(".drum")[i].addEventListener("click",handleClick); -> click-method, handleClick->function to perform 
+Constructor Function -> Used to create new class objects
+function BellBoy(name, age, years){
+this.name = name; .... }
+var bellboy1 = new BellBoy("FF",69,2)
+document.addEventListener("keypress",respondToKey(event)); -> waits for user, callback functions 
+
+______________________________________________________________________
+
+14 jquerry
+Import jQuerry using the script given below
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+document.querrySelector("h1") == $("h1") -> jquerry shortcuts 
+$(document).ready(function(){ $("h1") }); -> Wait for the entire jquerry lib to load 
+${"h1").addClass/removeClass/hasClass("class_name_from_css") -> adds,removes, checks class 
+${"h1").text("Bye") -> Changes text from original to Bye 
+$("h1") && ${"button") -> Selects all the elements of button, i.e querrySelector/All works same 
+$("h1").html(<en>Hey</en>) -> Works as innerHTML changes text to cursive Hey
+$("a").attr("href","yahoo.com"); -> Changes the anchor link from the tag
+$("input").keydown(function(e){ console.log(e.key); }); -> Event listener checks what is the input 
+$("h1").on("mouseover",function(){ $("h1").css("color","yellow"); }); -> Use on function to add eventListener 
+$("h1").before/after/prepend/append("<button>New</button>") -> Add something new without distrupting html
+$("button").on("click",function(){ $("h1").fadeToggle/fadeOut/toggle/slideUp/slideDown/animate({animate-only}); }); 
+                                         -> Add different styles life fadein/out/toggle/slideUp/slideDown
+______________________________________________________________________
+
+15 UNIX Command Line
+ls -> List of all directories 
+cd -> Change directory 
+cd ~ -> Go back to root directory 
+cd .. -> Takes back to one level  
+Cntr A -> Go to start of CLI 
+Cntr E -> Go to end of CLI 
+Cntr U -> Clears CLI 
+Alt + Mouse -> Can hover to any point at CLI 
+mkdir -> Make new Folder 
+touch notepad.txt -> Creates a text file
+code notepad.txt -> Opens the file on VS Code 
+rm notepad.txt -> Removes/Deletes files
+pwd -> Prints current working directory 
+rm * -> Removes every files
+rm -r Sahu -> Removes a directory 
+
+______________________________________________________________________
+
+16 Back-End
+Server - Application - Database
+Server -> Computer 24 by 7 on, to listen servers 
+Application -> Logic that runs on the server 
+Database -> Store User data 
+
+______________________________________________________________________
+
+// npm init
+// npm i express https body-parser requests ejs
+// nodemon app.js
+
+const express = require('express');
+const bodyParser = require("body-parser");
+const https = require("https");
+const requests = require("requests");
+const date = require(__dirname+"/date.js");
+const app = express();
+// Post nested pbjects from HTML 
+// Parse http request
+app.set('view engine','ejs'); // Sets ejs templates 
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(express.static("public"));
+app.listen(3000,function(){
+    console.log("Server is running on port 3000");
+});
+app.get("/",function(req,res){
+    res.sendFile(__dirname+"/index.html");
+// Make func in date.js exports.getDate = function() { return day } 
+   day = date.getDate(); 
+   res.render("list",{listTitle:day, newListItems:items});
+   res.render('list',{kindOfDay:day}); // list.ejs must be inside views folder // pass list.ejs and dict
+ // Use <%= kindOfDay %> in list.ejs to substitute the values using res.render
+// Use <% %> tags to write if-else scripts in list.ejs file 
+});
+
+app.post("/",function(req,res){
+// Get https request to API || url is the API key
+   https.get(url,function(response){
+        // Fetch data from API 
+        response.on("data",function(data){
+        const wd = JSON.parse(data);
+)}; )};
+// Express routing
+app.get('/posts/:title', (req, res) => {
+  console.log(req.params.title);
+})
+
+_______________________________________________________
+
+const express = require('express');
+const bodyParser = require("body-parser");
+// const https = require("https");
+// const requests = require("requests");
+const ejs = require("ejs");
+const mongoose = require("mongoose")
+const app = express();
+
+app.set('view engine','ejs'); // Sets ejs templates 
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(express.static("public"));
+
+mongoose.connect("mongodb://127.0.0.1:27017/wikiDB");
+
+const articleSchema = {
+    title: String,
+    content: String
+};
+
+const Article = mongoose.model("Article",articleSchema);
+
+
+
+app.listen(3000,function(){
+    console.log("Server is running on port 3000");
+});
+
+
+_________________________________________________________
+
+EJS -> Create templates for multiple HTML pages Embedded JS templating 
+
+mongod mongo
+show dbs -> Show all the DBS
+use shopDB -> Use this DB
+db.products.insertOne({Pass dictionary value}) -> Add values 
+show collections -> Tables created i.e products
+db.products.find() -> Find with any filter 
+db.products.find({price: {$gt:1}}) -> Apply filters 	
+db.products.updateOne({_id:2},{$set:{stock:12}})
+
